@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name '*.gif' -printf '%f\n' | sed 's/\.gif$//' | sort -f -d -t$'\0' | tr '\n' '\0' | xargs -0 -I {} echo {} ; echo  
+find -type f -name  ".gif_" | rev | cut -d "/" -f 1 | cut -d '.' 2- | rev | LC_ALL=C sort -f  
